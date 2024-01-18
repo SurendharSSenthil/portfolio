@@ -1,0 +1,382 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: linear-gradient(90deg, rgba(0, 22, 70, 1) 0%, rgba(10, 1, 70, 1) 98%);
+    --font-color: #fff;
+    --heading-color: linear-gradient(90deg, rgba(255, 202, 10, 1) 0%, rgba(230, 42, 80, 1) 100%);
+    --card-bg: linear-gradient(90deg, rgba(0, 31, 98, 1) 1%, rgba(26, 11, 128, 1) 98%);
+    --h2-color: linear-gradient(50deg, rgba(216, 2, 206, 1) 0%, rgba(216, 129, 2, 1) 81%, rgba(209, 30, 0, 1) 98%);
+    --contact-color: linear-gradient(179deg, rgba(0, 22, 70, 1) 38%, rgba(3, 53, 163, 1) 99%);
+}
+    
+body{
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+}
+
+
+.Head{
+    background: var(--bg-color);
+    height: 100vh;
+    color: var(--font-color);
+}
+
+/* .tagLine{
+    display: flex;
+    flex-direction: row;
+} */
+
+.overlay-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+}
+
+.profile{
+    width: 175px;
+    height: 175px !important;
+    border-radius: 50%;
+
+}
+
+
+.Head h1 {
+    color: transparent;
+    background: var(--heading-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 3em;
+}
+
+
+.Head p{
+    color: var(--font-color);
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+}
+
+.ai{
+    display: block;
+    height: 100vh;
+    position: absolute;
+    right: 8%;
+    top: 20px;
+    transform: translateX(60%);
+}
+
+
+.animated {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.animated.in-view {
+    opacity: 1;
+}
+
+
+
+#About{
+    background: var(--bg-color);
+    color: var(--font-color);
+    padding: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-me{
+    background: var(--heading-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.about{
+    padding: 40px;
+    background: var(--card-bg);
+    font-size: 20px;
+    line-height: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+#Education{
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Education h1{
+    background: var(--heading-color);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+
+.Education{
+    background: var(--bg-color);
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8%;
+    gap:25px;
+}
+
+.edu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: var(--card-bg);
+    padding: 15px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    font-size: 20px;
+    line-height: 30px;
+    border-radius: 8px;
+}
+
+#Skills{
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Skills{
+    /* background: var(--bg-color); */
+    color: var(--font-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 8%;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+#Skills h1{
+    background: var(--heading-color);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#Skills h2{
+    background: var(--h2-color);
+    color: transparent;
+    background-clip: text;
+    margin: 20px;
+    -webkit-background-clip: text;
+}
+
+.skill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: var(--card-bg);
+    padding: 15px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    font-size: 20px;
+    line-height: 30px;
+    border-radius: 8px;
+}
+
+.skill img{
+    width: 150px;
+    height: 150px;
+}
+
+#Projects{
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Projects h1{
+    background: var(--heading-color);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.Projects{
+    /* background: var(--bg-color); */
+    color: var(--font-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 8%;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.project{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 15px;
+    flex-wrap: wrap;
+    background: var(--card-bg);
+    padding: 15px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    font-size: 20px;
+    line-height: 30px;
+    border-radius: 8px;
+    height: 275px;
+    width: 250px;
+}
+
+.project a{
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.p-image{
+    width: 150px;
+    height: 150px;
+}
+
+#Contact{
+    background: var(--contact-color); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100%; */
+}
+
+.Contact{
+    color: var(--font-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 8%;
+    flex-wrap:wrap;
+    gap:20%;
+}
+
+#Contact h1{
+    background: var(--heading-color);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.con{
+    font-size: 50px;
+    padding: 20px;
+}
+
+/* .Email{
+    font-size: 40px;
+} */
+
+#Contact a:hover{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .Head {
+        /* display: relative; */
+        height: 100vh;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+
+    .ai {
+        display: none;
+    }
+
+    .overlay-text {
+        padding: 20px;
+        position: absolute;
+        /* top: 40%; */
+    }
+
+    .profile{
+        width: 125px;
+        height: 125px !important;
+    }
+
+    .Head h1 {
+        font-size: 2em;
+    }
+
+    .Head p {
+        font-size: 16px;
+    }
+
+    .about p,
+    .edu{
+        font-size: 16px;
+    }
+
+    #About,
+    #Education,
+    #Skills,
+    #Projects,
+    #Contact {
+        padding: 5%;
+    }
+
+    .skill,
+    .edu,
+    .Contact {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .project{
+        width: 200px;
+        font-size: 16px;
+    }
+
+    .skill img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .skill{
+        width: 200px;
+    }
+
+    .Contact {
+        gap: 5%;
+    }
+
+    #Contact h1 {
+        font-size: 2em;
+    }
+
+    .con {
+        font-size: 30px;
+        padding: 10px;
+    }
+}
